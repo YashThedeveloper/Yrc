@@ -1,0 +1,442 @@
+{% extends 'basic.html' %}
+{% load static %}
+<!-- FOR ADDING FILES(CSS) -->
+{% block head %}
+<style>
+    /* clients carousel */
+.carousel-control-prev-icon,.carousel-control-next-icon{background-color: #333;
+}
+
+.client_carousel{
+  margin: 10vh 0;
+}
+.client_carousel h1{
+  margin-bottom: 10vh;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+.clients_gallery{
+    padding-top: 60px;
+    margin-bottom: 40px;
+}
+.clients_gallery img{
+    height: 150px;
+    width: 150px;
+}
+.client_line{
+    width: 100%;
+    height: 1vh;
+    background: #333;
+}
+.client_head{
+    padding-top: 5vh;
+}
+.client_head h1{
+    font-weight: bolder;
+    text-decoration: underline;
+    letter-spacing: 3px;
+}
+/* clients carousel */
+</style>
+{% endblock %}
+<!-- FOR MAIN BODY -->
+{% block body %} 
+  <div class="client_carousel text-uppercase text-center">
+    <h1 class="text-center">Clients</h1>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="4500" data-pause="false">
+      <div class="container carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/ampacet.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Ampacet</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/bright.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Bright..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/butterfly.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Butterfly</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/dsm.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">DSM</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/flame.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Flame..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/greenfield.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">greenfield..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/industrial.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Industrial..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/inflame.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Inflame</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/kesar.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Kesar..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/Technofor.png' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Technofor</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/krishi.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Krishi..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/krishna.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Krishna..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/kundan.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Kundan..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/lancer.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Lancer..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/malbro.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Malbro..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/malhotra.png' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Malhotra..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/nipun.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Nipun..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/pride.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Pride..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/raj.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Raj..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/satyam.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Satyam..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/satmax.png' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Satmax..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-12 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/shiva.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Shiva..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/stuffa.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Stuffa..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/sunspark.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Sunspark..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/valco.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Valco..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/xpro.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Xpro</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8 col-8 offset-lg-1 offset-md-1 offset-4 offset-sm-4">
+              <div class="card" style="width: 10rem; height: 14rem;">
+                <img class="card-img-top" style="width: 10rem; height: 10rem; background-size: 100%,100%;" src="{% static 'images/yash.jfif' %}" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <div class="card-body">
+                  <p class="card-text">Yash..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+
+
+
+  <div class="client_line"></div>
+  <div class="client_head text-center text-uppercase">
+      <h1>Clients</h1>
+      <h1>galery</h1>
+  </div>
+  <div class="container clients_gallery">
+      <div class="row">
+          <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+              <img src="{% static 'images/ampacet.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+              <p>Ampacet</p>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/bright.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>Bright..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/butterfly.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>Butterfly..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/dsm.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>DSM</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/flame.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>Flame..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/greenfield.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>Greenfield..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/industrial.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>industrial..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/inflame.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>inflame</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/kesar.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>kesar..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/krishi.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>krishi..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/krishna.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>krishna</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/kundan.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>kundan..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/lancer.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>lancer..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/malbro.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>malbro..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/malhotra.png' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>malhotra..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/nipun.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>nipun..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/pride.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>pride..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/raj.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>raj..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/satyam.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>satyam..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/satmax.png' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>satmax..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/shiva.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>shiva..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/stuffa.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>stuffa..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/sunspark.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>sunspark..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/technofor.png' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>Technofor</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/valco.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>valco..</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/xpro.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>xpro</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 col-12 text-center text-uppercase">
+            <img src="{% static 'images/yash.jfif' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+            <p>yash..</p>
+        </div>
+        
+      </div>
+  </div>
+  <div class="client_end text-uppercase text-center">
+      <p>(Respected clients please provide their respective logo)</p>
+  </div>
+  <div class="client_line"></div>
+
+  <!-- creating clients gallery -->
+  <!-- creating clients gallery -->
+{% endblock %}
+<!-- FOR ADDING FILES(JS) -->
+{% block js %} {% endblock %}

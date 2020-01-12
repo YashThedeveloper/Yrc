@@ -1,0 +1,495 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        #loader_bg{
+            position: fixed;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background: #000;
+        }
+        .loader{
+            position: relative;
+            width: 60vh;
+            height: 60vh;
+            border-radius: 50%;
+            background: linear-gradient( #33ccff, #ffeb3b, #ff0066);
+            animation: animate1 0.5s linear infinite;
+        }
+        h1{
+            color: white;
+        }
+        @keyframes animate1 {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .loader:after{
+            content: '';
+            position: absolute;
+            top: 30px;
+            bottom: 30px;
+            right: 30px;
+            left: 30px;
+            border-radius: 50%;
+            background: #000;
+        }
+        .loader span{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+        }
+        .loader span:nth-child(1){
+            filter: blur(5px);
+        }
+        .loader span:nth-child(2){
+            filter: blur(10px);
+        }
+        .loader span:nth-child(3){
+            filter: blur(20px);
+        }
+        .loader span:nth-child(4){
+            filter: blur(50px);
+        }
+    </style>
+    <title>YRC.YashRoadCarriers</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/titleimage.jpg' %}">
+    <!-- jquery -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!--*********Font Awesome cdn*********-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!--*********BOOTSTRAP CDN*********-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--*****************ANIMATE CSS******************-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!--*****CSS STYLE SHEAT*****-->
+    <!-- <link rel="stylesheet" href="{% static 'css/nav_foot.css' %}"> -->
+    {% block head %} {% endblock %}
+    <style>
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+li{list-style: none;}
+html{scroll-behavior: smooth;}
+::placeholder{text-align: center;align-items: center;}
+/*********NavBAR STYLING BEGANS ****/
+.header{
+    height: 50px;
+    width: 100%;
+    background: #000;
+    padding: 0 20px;
+    color: #fff;
+    z-index: 100;
+}
+.logo{
+    line-height: 50px;
+    float: left;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.menu{
+    float: right;
+    line-height: 50px;
+    font-weight: bold;
+}
+.menu a{
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 15px;
+    transition: 0.4s;
+}
+.show-menu-btn, .hide-menu-btn{
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+.show-menu-btn{
+    float: right;
+}
+.show-menu-btn i{
+    line-height: 50px;
+}
+.menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover{
+    color: #81ecec;
+}
+#chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -100;
+}
+/***************NAVBAR STYLING ENDS*****************/
+/* FOOTER STYLING BEGANS */
+.foothead h1{
+    font-size: 5.5rem;
+    font-weight: bolder;
+    letter-spacing: 10px;
+    margin-bottom: -15px;
+}
+.foothead h3{
+    margin-top: 18px;
+    font-weight: bolder;
+}
+.footer{
+    height: auto;
+    width: 100%;
+    background: #333;
+    color: white;
+}
+.foot_about_btn{
+    width: auto;
+    height: auto;
+    border-radius: 40px;
+    background-color: aqua;
+}
+.foot_about_btn a{
+    color: #000;
+}
+.footer p a{
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.quick_link{
+    line-height: 22px;
+}
+.foot_contact{
+    line-height: 38px;
+}
+.about,.quick_link,.foot_contact,.foot_map{
+    height: auto;
+    width: 100%;
+    border: 3px solid transparent;
+}
+.typi{
+    margin-bottom: -10px;
+}
+/* FOOTER STYLING ENDS */
+.foot_follow{
+    margin-top: 15px;
+}
+.foot_follow i{
+    padding: 0px 15px ;
+    margin-top: 5px;
+}
+.endline{
+    width: 100%;
+    height: 1vh;
+    background: white;
+    margin: 10px 0;
+}
+.foot_card{
+    padding-bottom: 5vh;
+}
+.foot_card div{
+    border: 2px solid black;
+}
+.marque{
+    background: black;
+    align-items: center;
+    color: #fff;
+}
+.marque h4{
+    color: chartreuse;
+    font-weight: bolder;
+    padding-top: 3px;
+}
+.marque marquee{
+    color: rgb(255, 230, 0);
+}
+.quick_link p{
+    color: white;
+}
+.foot_follow i{
+    color: #fff;
+    transition: 0.2s linear;
+}
+.foot_follow i:hover{
+    transform: scale(1.5,1.5);
+    transform: rotate(1800deg);
+    transition: 0.2s linear;
+}
+#topbtn{
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 26px;
+    width: 50px;
+    height: 40px;
+    font-weight: bolder;
+    color: white;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    transition: 0.5s linear;
+}
+#topbtn:hover{
+    transform: scale(1.2,1.2);
+    background-color: black;
+    transition: 0.5s linear;
+}
+.foot_follow img{
+    height: 50vh;
+    width: 50vh;
+    background-position: center;
+    background-size: cover;
+    display: none;
+}
+
+
+
+
+
+    
+@media(max-width:991px){
+    .quick_link{
+        padding: 50px 0;
+    }
+    .foot_map{
+        padding: 50px 0;
+    }
+}
+@media(max-width:900px){
+    .show-menu-btn, .hide-menu-btn{
+        display: block;
+    }
+    .menu{
+        z-index: 100;
+        font-weight: bolder;
+        font-size: larger;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#333;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 40px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+    .menu a{
+        display: block;
+        padding: 15px;
+    }
+    .hide-menu-btn{
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+    #chk:checked ~ .menu{
+        right: 0;
+    }
+}
+/* @media(max-width:576px){
+    .foot_card{
+        padding-left: 0px;
+    }
+} */
+</style>
+
+</head>
+<body onload="loader()">
+    <!-- loader -->
+    <div id="loader_bg">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!--*******Navbar coding Begans********-->
+    <div class="header">
+        <h2 class="logo">YRC</h2>
+        <input type="checkbox" id= "chk">
+        <label for="chk" class="show-menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="menu">
+            <a href="/">HOME</a>
+            <a href="/tracker/">TRACKER</a>
+            <a href="/clients/">CLIENTS</a>
+            <a href="/gallery/">GALLERY</a>
+            <a href="/about/">ABOUT</a>
+            <a href="/contact/">CONTACT US</a>
+            <a href="/admin/">LOGIN</a>
+            <label for="chk" class="hide-menu-btn">
+                <i class="fas fa-times"></i>
+            </label>
+        </ul>
+    </div>
+    <!--*******Navbar coding Begans********-->
+    {% block body %} {% endblock %}
+    <!-- FOOTER CODING BEGANS -->
+    <div class="foothead text-uppercase text-center">
+        <h1 class="text-center">YRC</h1>
+        <h5 class="text-center">Yash Road Carriers</h5>
+        <h3>A PROMISE OF COMPLETE SATISFACTION</h3>
+    </div>
+    <div class="container">
+        <div class="row text-center text-uppercase foot_card">
+            <div class="col-lg-3 col-md-3 col-xs-12 col-12">
+                <img src="{% static 'images/dbl-chk.png' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <h5>Why us</h5>
+                <p>We have adopted appropriate technology, so that we can easily share our information. We are giving our best for providing you the best services.
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-12 col-12">
+                <img src="{% static 'images/gear.jpg' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <h5>Services</h5>
+                <p>YRC groups provides services across many parts of INDIA. Transporting goods in a wide variety. Transporting small goods in parcels or either with containers.</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-12 col-12">
+                <img src="{% static 'images/termcon.jpg' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <h5>Policy</h5>
+                <p>Our Policy is to make our clients happy and maintained thier satisfaction on us. We have adopted for this a reliable technology so that we can interact more with each other.</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-12 col-12">
+                <img src="{% static 'images/cashless.jpg' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <h5>Cashless</h5>
+                <p>We are growing with our societies and we have taken many steps forwards, but the important one is which we take is to be digital. Which is a very positive step towards<strong> Digital INDIA.</strong></p> 
+            </div>
+        </div>
+    </div>
+    <div class="marque d-flex text-uppercase">
+        <div class="marque_head"><h4>Our officies</h4></div>
+        <marquee onmouseover="this.stop()" onmouseout="this.start()" width="82%">
+             chandigarh | mohali | ludhiana | panchkula | ambala | sonipat | faridabad | delhi | mumbai | pune | nasik | banglore | kolkata | jaipur | ahemdabad | baroda | haridwar | ruderapur | siliguri | baddi | parwanoo | kala amb | 
+        </marquee>
+    </div>
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+                    <div class="about text-center">
+                        <h4 class="text-uppercase">About us</h4>
+                        <img src="{% static 'images/titleimage.jpg' %}" width="100" height="100"><br>
+                        <p>We are one of the trusted logistic in <b>INDIA</b>. We are transporting goods across all parts of the <b>INDIA</b></p>
+                        <div class="foot_about_btn text-center"><a href="/about">More about us</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+                        <div class="quick_link text-uppercase text-center">
+                            <h4>quick links</h4><br>
+                            <a href="/"><p>home</p></a>
+                            <a href="/tracker/"><p>tracker</p></a>
+                            <a href="/gallery/"><p>gallery</p></a>
+                            <a href="/contact/"><p>contact us</p></a>
+                            <a href="/admin/"><p>login</p></a>
+                        </div>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+                    <div class="foot_contact text-center">
+                        <h4>CONTACT US</h4>
+                        <P><a href="/contact"> CONTACT US ON THIS WEBSITE</a></P>
+                        <P class="typi">CONTACT US ON</P>
+                            <div id="typed-strings">
+                                <p>9356021010</p>
+                                <p>7875927695</p>
+                                <p>9803021010</p>
+                            </div>
+                              <span id="typed"></span>
+                        <p>EMAIL US ON <b><a href="mailto:+yrc.yashroadcarriers@gmail.com">yrc.yashroadcarriers@gmail.com</a></b></p>
+                    </div>
+                </div><div class="col-lg-3 col-md-12 col-sm-12 col-12">
+                    <div class="foot_map text-center">
+                        <h4>VISIT US AT</h4>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.5991914351334!2d76.83261681389466!3d30.673413095542696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f95aa776cb44f%3A0x72bb8fbd1695b12d!2syrc!5e0!3m2!1sen!2sin!4v1577947795594!5m2!1sen!2sin" width="210" height="210" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="foot_follow text-center">
+                <h4>STAY CONNENCTED WITH US ON</h4>
+                <!-- <i href="#"><i class="fab fa-instagram" style="font-size: 30px;"></i></a> -->
+                <a href="https://www.facebook.com/profile.php?id=100001366052402"><i class="fab fa-facebook-f " style="font-size: 30px;"></i></a>
+                <a href="#"><i class="fab fa-twitter " id="twitlog" style="font-size: 30px;"></i></a>
+                <!-- <i href="#"><i class="fab fa-youtube" style="font-size: 30px;"></i></a> -->
+                <img src="{% static 'images/twitlog.png' %}" alt="something went WRONG" id="twitlogimg">
+            </div>
+            <div class="endline"></div>
+            <div class="end_line text-center">
+                <h4>Copyright &#9400; 2020 <strong>YRC</strong>. All right reserved.</h4>
+                <h5>Maintained and Created by <strong>YRC</strong></h5>
+            </div>
+         </div>
+     </div>
+    <!-- FOOTER CODING ENDS -->
+    <!-- top button -->
+    <div id="topbtn" class="text-center"><i class="fas fa-arrow-up"></i></div>
+    
+
+
+
+    <!--**********BOOTSTRAPS CDN OF JQUERY, CLOUDFLARE, JAVASCRIPT-->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+    <!-- TYPED CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <!-- JS FILES INCLUDED HERE -->
+    {% block js %} {% endblock %}
+    
+    <script>
+        
+</script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 60){
+                    $('#topbtn').fadeIn();
+                } else{
+                    $('#topbtn').fadeOut();
+                }
+            });
+            $('#topbtn').click(function(){
+                $('html,body').animate({scrollTop : 0},800)
+            });
+            $("#twitlog").click(function(){
+            $("#twitlogimg").toggle();
+        });
+        });
+    </script>
+    <script>
+        var typed = new Typed('#typed', {
+          stringsElement: '#typed-strings',
+          typeSpeed: 100,
+          backSpeed: 0,
+          loop: true,
+          loopCount: Infinity,
+          contentType: 'html',
+        });
+      </script>
+      <script>
+          var preloader = document.getElementById('loader_bg');
+          function loader(){
+              preloader.style.display = 'none'
+          }
+      </script>
+</body>
+</html>

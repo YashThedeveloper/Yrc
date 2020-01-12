@@ -1,0 +1,30 @@
+{% extends 'basic.html' %}
+{% load static %}
+<!-- FOR ADDING FILES(CSS) -->
+{% block head %}
+<style>
+    .gallery_head{
+        margin: 60px 0px;
+    }
+    .gallery_head h1{
+        text-decoration: underline;
+        font-weight: bolder;
+        letter-spacing: 3px;
+    }
+    .imgcont img{
+        margin-bottom: 15vh;
+        border: 2px solid #000;
+    }
+</style>
+{% endblock %}
+<!-- FOR MAIN BODY -->
+{% block body %}
+<div class="gallery_head text-uppercase text-center">
+    <h1>Images</h1>
+</div>
+<div class="container imgcont">
+    <img src="{% static 'images/log head.jpg' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+</div>
+{% endblock %}
+<!-- FOR ADDING FILES(JS) -->
+{% block js %} {% endblock %}

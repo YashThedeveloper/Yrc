@@ -1,0 +1,114 @@
+{% extends 'basic.html' %}
+{% load static %}
+<!-- FOR ADDING FILES(CSS) -->
+{% block head %}
+<style>
+    .abouthead{
+        height: 50vh;
+        width: 100%;
+        color: white;
+        background: url("../static/images/aboutus.jpg");
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0,0,0,0.4);
+        background-blend-mode: overlay;
+        margin-bottom: 10vh;
+}
+.abouthead h1{
+    padding-top: 20px;
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-decoration: underline;
+}
+.abouthead p{
+    font-weight: bolder;
+    word-spacing: 3px;
+}
+.about_line{
+    height: 1vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.about_mid p{
+    padding-top: 13px;
+}
+.about_last{
+    margin: 10vh 0;
+}
+.about_mid2 img{
+    height: 40vh;
+    filter: saturation(50%);
+    transition: 2s linear;
+}
+.about_last img{
+    transition: 2s linear;
+    filter: brightness(50%)
+}
+.about_last img:hover{
+    filter: brightness(100%);
+    transition: 1s linear;
+    transform: rotate(360deg);
+}
+/* .about_mid2 img:hover{
+    background: linear-gradient(rgba(140deg, #8870FF, #FCB941 #83D6DE, 0.5))
+} */
+</style>
+{% endblock %}
+<!-- FOR MAIN BODY -->
+{% block body %}
+<div class="abouthead text-center text-uppercase">
+    <h1 class="text-center justify-content-center">About Us</h1>
+    <p>A company which provides complete satisfaction to their clients.</p>
+</div>
+<div class="about_line"></div>
+<div class="about_mid text-uppercase text-center">
+    <p>Since starting of this company we <b>sacrifices</b> a lot, faces lots of <b>challenges</b>, hardly manage the company but with of our experience we delivered one of the the best services in the logistics field and created complete faith on us in our clients eyes with our services, and on our deliveries clients have complete satisfaction of safefully delivery with respect to <strong>time</strong></p>
+    <p>now we have developing all our resources so that we will contact each other easily and gave response to majority of time</p>
+    <p>one the best logistics service provider is <a href="/home"><b><u>Yash Road Carriers</u></b></a></p>
+</div>
+<div class="about_line"></div>
+<div class="about_mid2 text-uppercase text-center">
+    <h1>managed by</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12 col-12">
+                <img src="{% static 'images/director.jpg' %}" height="400px" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <h1>Mr. Yogesh Sharma</h1>
+                <p>Company director</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12 col-12">
+                <img src="{% static 'images/manager.jpg' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER" height="400">
+                <h1>Mr. vijay Sharma</h1>
+                <p>Company Manager</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about_line"></div>
+<div class="about_last">
+    <div class="container">
+        <div class="row text-center text-uppercase">
+            <div class="col-lg-3 col-md-3 col-xs-12 col-12">
+                <img src="{% static 'images/listen.jpg' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <h5>We listen to all</h5>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-12 col-12">
+                <img src="{% static 'images/idea.jpg' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <h5>we provide solutions</h5>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-12 col-12">
+                <img src="{% static 'images/stayclient.jpg' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <h5>we think first for clients</h5>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-12 col-12">
+                <img src="{% static 'images/future.jpg' %}" class="img-fluid" alt="SOMETHING WENT WRONG, KINDLY CHECK YOUR CONNECTION OR REFRESH THE BROWSER">
+                <h5>we think of future</h5>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about_line"></div>
+{% endblock %}
+<!-- FOR ADDING FILES(JS) -->
+{% block js %} {% endblock %}
